@@ -1,0 +1,1 @@
+raise ValueError("Lot size එක 0 ට වඩා වැඩි වෙන්න ඕනේ!")
