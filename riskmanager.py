@@ -16,6 +16,7 @@ try:
                return
            self.__leverage=new_leverage
    account1=riskmanager(40)
+   print(account1.leverage)
 
 except AttributeError:
     print(f"You haven't set your leverage yet!!  Max leverage is {riskmanager.max_leverage}! ")
