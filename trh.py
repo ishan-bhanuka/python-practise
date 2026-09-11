@@ -1,0 +1,1 @@
+print("Ishan Bhanuka"[::-2])
