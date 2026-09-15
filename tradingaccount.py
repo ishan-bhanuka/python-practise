@@ -10,7 +10,8 @@ class trading_account:
     @property
     def balance(self):
         return f'Your account balance:{self.__balance}'
-#    @balance.setter                             You told me to add this , but I don't think it's a good idea, why do we let them change the balance?
+#    @balance.setter                             You told me to add this , but I don't think it's a good idea, why do we let them change the balance?      
+#                                                     May by you will find there are some unnessasary lines here, some of them are here because I feel like I would need them(maybe to extend the code).
 #    def balance(self,new_balance):
 #        if new_balance<0:                
 #            print('ERROR!!')
@@ -23,11 +24,12 @@ class trading_account:
         self.trade_count+=1
         if PnL<0:
             self.__balance+=PnL
+            self.trading_history.append(f'trade {self.trade_count} PnL:{PnL}')
             if self.__balance<=10:
                 print('You should have at least 10$ dollars to trade')
                 self.__balance=0
                 return
-            self.trading_history.append(f'trade {self.trade_count} PnL:{PnL}')
+            
             self.lost_trades+=1
         else:
             self.__balance+=PnL
@@ -43,7 +45,12 @@ account3=trading_account(5334276833,1500)
 account1.trade(-233)
 account1.trade(356)
 account1.trade(-3544)
+account2.trade(533)
+account3.trade(343)
 
 print(account1.balance)
 print(account1.history)
 print(account1)
+print(account2.balance)
+print(account2.history)
+print(account2)
