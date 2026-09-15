@@ -13,7 +13,7 @@ class riskmanager:
             print(f'Max leverage is {riskmanager.max_leverage}!')
             return
         self.__leverage=new_leverage
-account1=riskmanager(40)
+account1=riskmanager(400)
 print(account1.leverage)
 account1.leverage=333
 account1.leverage=100
