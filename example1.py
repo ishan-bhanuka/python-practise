@@ -21,3 +21,4 @@ name='ishan bhanuka'
 y=list(x)
 y.append(45243)
 print(x,y)
+print(list(name))
