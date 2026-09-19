@@ -19,6 +19,9 @@ class Crypto_Trader(Trader):
         super().__init__(name,balance)
         self.trading_platform=trading_platform
 
+    def show_info(self):
+        super().show_info()
+        print('Working on it.....')
 
 
 trader1=Forex_Trader('Ishan',1000,'FTMO')
@@ -30,3 +33,9 @@ print(issubclass(Forex_Trader,Trader))
 print(trader1.prop_firm)
 trader1.trade('AUDUSD')
 trader1.show_info()
+trader2.show_info()
+print(type(trader1))
+if type(trader1) == Forex_Trader:
+    print (34234324)
+else:
+    pass
